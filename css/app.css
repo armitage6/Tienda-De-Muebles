@@ -1,0 +1,199 @@
+/* colores se pueden definir en base a un nombre, hexadecimal, RGB, HSL*/
+/* añadir traasparencia con RGBA() y HSLA()
+  color: rgb(0, 0, 0, .5) el valor final es de la trasparencia
+*/
+
+/* 
+seudo selectores
+    nav a:first-child o last-child {
+        font-size: 20px;
+    }
+
+     nav a:nth-child() {
+        font-size: 20px;
+    }
+*/
+
+
+/*
+    si selecionamos ej: nav .categoria, selecciona los la clase categoria de otro elemento que esta en el nav 
+    pero si selecionamos nav.categoria seleccionamos la clase del nav es lo mismo a .categoria, que selecionamos los elementos que tengan esa clase
+
+    nav a: es menos especifico que una clase y una clase es menos especifico que un id
+
+*/
+
+
+/*
+    Box Model en CSS, todo es una caja pero como sea esa caja y que medidas tenga depende de 4 cosas: contenido, padding, borde y margin
+
+    implementarlos puede afecar la creacion del css
+    ejemplo: 
+
+    .sobre-nosotros {
+    background-color: red;
+    white:200px;
+    padding: 25px;
+    box-sizing: border-box;  s
+    
+    i no ponemos border-box va a definir el tamaño sumando white y padding pero si lo aplicamos el padding va definir su tamaño con respecto al white
+    
+    }
+
+*/
+
+/*
+    Display en css, todos los elementos html tienen un display 
+    display-block el elemento se va a posicion abajo, ejemplo: etiqueta p
+    display-inline, el elemento se posiciona a la derecha una vez que haya tomado el espacio que requiere. ejemplo etiqueta a
+    display-inline-block, permite darle un white, height y margin, ejemplo etiqueta a
+*/
+
+/*
+    Flexbox en CSS, fue diseñado como un modelo Unidemnsional para crear Layouts
+    Se puede colocar o distribuir tus elementos en una direccion : ya sea fila (row) o columna (column)
+    Row es aplicado por default al definir un display: flex; y mostrara los elementos ya sea de izquierda a derecha (row) o derecha a izquierda (row-reverse)
+    sirve para aliniar
+
+    alineacion en flexbox, permitira alinear los elementos de forma horizontal y vertical, justify-content y align-items
+
+    si flex-direction es row se alinea con justify-content, si es column con aling-item
+    si tengo un height se puede usar aling-item para alinear un elemento con flex-direcion row y llevarlo a donde queramos en la altura que tengamos
+*/
+
+/*
+    Que es CSS Grid, te permite definir la ubicacion y el tamaño de tu sitio web
+
+    flexbox es unidimensional (row o column), pero CSS Grid te permite distribuir elementos en ambas
+
+    se habilita colocando display-grid;
+
+    flexbox, el contenido crece automaticamente 
+    CSS Grid, el contenido se agrupa dentro de un area definida 
+
+Terminologia de CSS Grid 
+Para crear columnas utilizamos grid-template-column 
+Para crear rows o filas utilizamos grid-template-rows
+Es posible definir un diseño con grid-template-areas
+
+Grid lines: te nemos lineas con sus posiciones
+Grid Track: parte media, puede ser horizontal o vertical
+grid Cell : cuando aplicamos row y area tenemos celdas
+Grid area: se habilita cuando utilizamos nombres o en el grid
+
+*/
+
+
+/*
+Unidades en CSS, algunas propiedades en CSS requieren una unidad como son width, padding, margin, 
+
+unidades relativas , toman su valor en base a otro elemento, em, rem, vh, vw y porcentaje 
+
+tienen la ventaja de que se adaptan mejor a diferentes resoluciones y densidades de pixeles, lo cual lo hace la mejor opcion para la gran cantidad de dispositivos que utilizan los usuarios para navegar 
+
+
+*/
+
+
+
+
+html {
+    
+    box-sizing: border-box;
+    font-size:  62.5%; /* 1 rem = a 10 pixeles*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1.6rem;
+}
+
+
+
+/* Globales*/
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contenedor {
+    max-width:  120rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%; /* Esto lo que hace es que si el div mide 300 la imagen aunque mida mas va a tomar el espacio que tiene el div*/
+    display: block;
+}
+
+
+/*Header y Navegacion*/
+
+
+.nombre-sitio {
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+/*Anidar*/
+.nombre-sitio span {
+
+    color:#037bc0
+}
+
+.contenedor-navegacion {
+    border-top: 1px solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex; /*Con esto habilitamos flexbox en el elemento*/
+    justify-content: space-between;
+    
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 55rem;
+}
+
+
+/* Categorias */
+
+.categoria h2 {
+    text-align: center;
+}
+
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem; /* las propiedades del text son para afectar todo el texto font es para afecta la fuente (hacerlo mas grande)*/
+}
+
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #FFF;
+    border-bottom-right-radius: 1rem;
+}
+
+
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
