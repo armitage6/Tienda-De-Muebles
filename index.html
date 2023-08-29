@@ -42,9 +42,9 @@
     </div>
 
 
-    <section class="contenedor categoria">
+    <section class="contenedor categorias">
         <!-- Si el primer hijo es un heading es muy probable que sea un section, es una regla -->
-        <h2>Categorías de Productos</h2>
+        <h2 class="text-center">Categorías de Productos</h2>
 
         <div class="listado-categorias">
 
@@ -68,90 +68,93 @@
 
 
     <section class="sobre-nosotros">
-        <div>
-            <h2>Sobre Nosotros</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus dolore nulla velit commodi optio
-                iusto vitae voluptate! Aperiam saepe, tenetur quia sapiente a porro voluptatum commodi praesentium,
-                placeat sit dolores.</p>
+        <div class="contenedor sobre-nosotros-grid">
+            <div class="texto-nosotros">
+
+                <h2>Sobre Nosotros</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus dolore nulla velit commodi optio
+                    iusto vitae voluptate! Aperiam saepe, tenetur quia sapiente a porro voluptatum commodi praesentium,
+                    placeat sit dolores.</p>
+            </div>
         </div>
     </section>
 
-    <main>
+    <main class="contenido-principal contenedor">
         <!-- con main especificamos en que parte reside el contenido mas importante debemos tener un main por pagina -->
-        <h2>Nuestros Productos</h2>
+        <h2 class="text-center">Nuestros Productos</h2>
 
 
 
-        <div>
-            <div>
+        <div class="listado-productos">
+            <div class="producto">
                 <img src="img/producto1.jpg" alt="">
-                <div>
+                <div class="texto-producto">
                     <h3>Producto 1</h3>
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
-                    <p>$1,000.00</p>
-                    <a href="#">Agregar Carrito</a>
+                    <p class="precio">$1,000.00</p>
+                    <a class="btn" href="#">Agregar Carrito</a>
                 </div>
 
             </div>
 
-            <div>
+            <div class="producto">
                 <img src="img/producto2.jpg" alt="">
-                <div>
+                <div class="texto-producto">
                     <h3>Producto 2</h3>
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
-                    <p>$1,000.00</p>
-                    <a href="#">Agregar Carrito</a>
+                    <p class="precio">$1,000.00</p>
+                    <a class="btn" href="#">Agregar Carrito</a>
                 </div>
 
             </div>
 
 
-            <div>
+            <div class="producto">
                 <img src="img/producto3.jpg" alt="">
-                <div>
+                <div class="texto-producto">
                     <h3>Producto 3</h3>
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
-                    <p>$1,000.00</p>
-                    <a href="#">Agregar Carrito</a>
+                    <p class="precio">$1,000.00</p>
+                    <a class="btn" href="#">Agregar Carrito</a>
                 </div>
 
             </div>
 
-            <div>
+            <div class="producto">
                 <img src="img/producto4.jpg" alt="">
-                <div>
+                <div class="texto-producto">
                     <h3>Producto 4</h3>
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
-                    <p>$1,000.00</p>
-                    <a href="#">Agregar Carrito</a>
+                    <p class="precio">$1,000.00</p>
+                    <a class="btn" href="#">Agregar Carrito</a>
                 </div>
 
             </div>
 
-            <div>
+            <div class="producto">
                 <img src="img/producto5.jpg" alt="">
-                <div>
+                <div class="texto-producto">
                     <h3>Producto 5</h3>
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
-                    <p>$1,000.00</p>
-                    <a href="#">Agregar Carrito</a>
+                    <p class="precio">$1,000.00</p>
+                    <a class="btn" href="#">Agregar Carrito</a>
                 </div>
 
             </div>
 
-            <div>
+            <div class="producto">
                 <img src="img/producto6.jpg" alt="">
-                <div>
+                <div class="texto-producto">
                     <h3>Producto 6</h3>
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
-                    <p>$1,000.00</p>
-                    <a href="#">Agregar Carrito</a>
+                    <p class="precio">$1,000.00</p>
+                    <a class="btn" href="#">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -164,39 +167,43 @@
 
 
 
-    <footer>
-        <div>
-            <h3>Categorías</h3>
-            <nav>
-                <a href="#">Cocina</a>
-                <a href="#">Oficina</a>
-                <a href="#">Jardín</a>
-                <a href="#">Cochera</a>
-                <a href="#">Dormitorios</a>
-            </nav>
-        </div>
+    <footer class="site-footer ">
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>Categorías</h3>
+                <nav class="footer-menu">
+                    <a href="#">Cocina</a>
+                    <a href="#">Oficina</a>
+                    <a href="#">Jardín</a>
+                    <a href="#">Cochera</a>
+                    <a href="#">Dormitorios</a>
+                </nav>
+            </div>
 
-        <div>
-            <h3>sobre Nosotros</h3>
-            <nav>
-                <a href="#">Nuestra Historia</a>
-                <a href="#">Misión, Visión y Valores</a>
-                <a href="#">Carreras</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos y Servicio</a>
-            </nav>
-        </div>
+            <div>
+                <h3>sobre Nosotros</h3>
+                <nav class="footer-menu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Servicio</a>
+                </nav>
+            </div>
 
-        <div>
-            <h3>Soporte</h3>
-            <nav>
-                <a href="#">Preguntas Frecuentes</a>
-                <a href="#">Ayuda en Línea</a>
-                <a href="#">Confianza y Seguridad</a>
+            <div>
+                <h3>Soporte</h3>
+                <nav class="footer-menu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en Línea</a>
+                    <a href="#">Confianza y Seguridad</a>
 
-            </nav>
+                </nav>
+            </div>
+
         </div>
-        <p>Todos los derechos Reservados, TiendaMuebles</p>
+        <p class="copyright">Todos los derechos Reservados, TiendaMuebles</p>
+
     </footer>
 
 

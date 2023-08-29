@@ -97,6 +97,53 @@ tienen la ventaja de que se adaptan mejor a diferentes resoluciones y densidades
 
 
 
+/*
+Formas de escribir CSS 
+BEM - Block Element Modifier
+.card{}
+.card__titulo{}
+.card_titulo--activo{}
+
+
+Módulos CSS 
+.card {}
+. card h2 {}
+
+
+Utilidades 
+
+.text-center{}
+.color-red-100{}
+.bg-blue-200{}
+
+SMACSS 
+#header, #article, #footer{
+    wdith: 900px;
+    margin: auto;
+}
+
+#article {
+    border: solid #CCC;
+    border-width: 1px 0 0;
+}
+
+
+
+
+*/
+
+
+/* 
+Utiliza flexbox
+para la alineacion o distribucion de los elementos que estaran dentro de contenedores
+
+Utiliza CSS grid 
+para definir el layout de tu sitio web, como pueden ser las columnas o contenedores de elementos
+
+
+*/
+
+
 html {
     
     box-sizing: border-box;
@@ -109,6 +156,7 @@ html {
 body {
     font-family: 'Raleway', sans-serif; 
     font-size: 1.6rem;
+    line-height: 2;
 }
 
 
@@ -117,6 +165,20 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
 }
 
 a {
@@ -131,8 +193,37 @@ a {
 
 img {
     max-width: 100%; /* Esto lo que hace es que si el div mide 300 la imagen aunque mida mas va a tomar el espacio que tiene el div*/
-    display: block;
+    display: block; /* el width cubre todo el ancho pero el falta altura por cubrir por eso usamos display: block*/
 }
+
+.btn {
+    background-color: #8cbc00;
+    display: block; /* Display: block hace que ocupe todo el ancho disponible*/
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out; /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
+}
+
+.btn:hover { /*hover sirve para posicionarse sobre un elemento */
+
+    background-color: #769c02;
+}
+
+
+
+
+/*Definimos Utilidades que usaremos en partes donde la necesitemos*/
+/*UTILIDADES*/
+.text-center {
+    text-align: center;
+}
+
+
+
+
+
 
 
 /*Header y Navegacion*/
@@ -140,9 +231,9 @@ img {
 
 .nombre-sitio {
    margin-top: 5rem;
-   margin-bottom: 5rem;
+   
     text-align: center;
-    font-size: 4rem;
+    
 }
 
 /*Anidar*/
@@ -156,7 +247,7 @@ img {
 }
 
 .nav-principal {
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex; /*Con esto habilitamos flexbox en el elemento*/
     justify-content: space-between;
     
@@ -166,15 +257,19 @@ img {
     background-image: url(../img/principal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center; /*Centra la imagen vertical y horizontalmente*/
     height: 55rem;
 }
 
 
 /* Categorias */
 
-.categoria h2 {
-    text-align: center;
+.categorias  {
+    padding-top: 5rem; /* si tengo un espacio abajo debo tener el mismo arriba*/
 }
+
+
+
 
 .categoria a {
     text-align: center;
@@ -197,3 +292,177 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
+
+/*BLOQUE NOSOTROS*/
+
+.sobre-nosotros {
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg) ; /* primer valor ponemos la direcion y luego jugamos con el resto*/
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem ;
+}
+
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.texto-nosotros {
+    flex-basis: 50% ;
+    padding-left: 10rem;
+    color: #fff;
+}
+
+/* .sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem;
+
+}
+
+.texto-nosotros {
+    grid-column: 2 / 3;
+} */
+
+
+
+
+
+
+
+/** LISTADO DE PRODUCTOS */
+
+
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+   gap: 2rem;
+}
+
+
+.producto:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+.producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height:30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+
+.producto {
+    background-color: #037bc0;
+
+}
+
+
+.texto-producto {
+ text-align: center;
+ color: #fff;
+padding: 2rem;
+}
+
+.texto-producto h3 {
+    margin: 0;
+}
+
+.texto-producto p {
+margin: 0 0 .5rem 0;
+}
+
+
+.texto-producto .precio {
+     font-size: 2.8rem;
+     font-weight: 900;
+}
+
+
+/*FOOTER*/
+
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top:5rem ;
+}
+
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+
+.footer-menu a{
+    display: block;
+}
+
+.copyright {
+margin-top: 5rem;
+text-align: center;
+}
+
+
+
+
+/* 
+.grid-footer {
+    display: flex;
+    gap: 2rem;
+}
+
+.grid-footer div{
+    flex:1 ; /* Factor de crecimiento que va a tener un div, cuantas veces mas va a crecer con respecto a otro
+} 
+ */
