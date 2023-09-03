@@ -145,16 +145,20 @@ para definir el layout de tu sitio web, como pueden ser las columnas o contenedo
 
 
 html {
-    
+
     box-sizing: border-box;
-    font-size:  62.5%; /* 1 rem = a 10 pixeles*/
+    font-size: 62.5%;
+    /* 1 rem = a 10 pixeles*/
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
 }
@@ -163,7 +167,9 @@ body {
 
 /* Globales*/
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Playfair Display', serif;
     margin: 0 0 5rem 0;
 }
@@ -173,7 +179,7 @@ h1 {
 }
 
 h2 {
-    
+
     font-size: 4rem;
 }
 
@@ -187,26 +193,32 @@ a {
 }
 
 .contenedor {
-    max-width:  120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
 img {
-    max-width: 100%; /* Esto lo que hace es que si el div mide 300 la imagen aunque mida mas va a tomar el espacio que tiene el div*/
-    display: block; /* el width cubre todo el ancho pero el falta altura por cubrir por eso usamos display: block*/
+    max-width: 100%;
+    /* Esto lo que hace es que si el div mide 300 la imagen aunque mida mas va a tomar el espacio que tiene el div*/
+    display: block;
+    /* el width cubre todo el ancho pero el falta altura por cubrir por eso usamos display: block*/
 }
 
 .btn {
     background-color: #8cbc00;
-    display: block; /* Display: block hace que ocupe todo el ancho disponible*/
+    display: block;
+    /* Display: block hace que ocupe todo el ancho disponible*/
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
     padding: 1rem;
-    transition: background-color .3s ease-out; /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
+    transition: background-color .3s ease-out;
+    text-align: center;
+    /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
 }
 
-.btn:hover { /*hover sirve para posicionarse sobre un elemento */
+.btn:hover {
+    /*hover sirve para posicionarse sobre un elemento */
 
     background-color: #769c02;
 }
@@ -221,7 +233,9 @@ img {
 }
 
 
-
+.max-widht-30 {
+    max-width: 30rem
+}
 
 
 
@@ -230,16 +244,16 @@ img {
 
 
 .nombre-sitio {
-   margin-top: 5rem;
-   
+    margin-top: 5rem;
+
     text-align: center;
-    
+
 }
 
 /*Anidar*/
 .nombre-sitio span {
 
-    color:#037bc0
+    color: #037bc0
 }
 
 .contenedor-navegacion {
@@ -248,24 +262,27 @@ img {
 
 .nav-principal {
     padding: 1rem 0;
-    display: flex; /*Con esto habilitamos flexbox en el elemento*/
+    display: flex;
+    /*Con esto habilitamos flexbox en el elemento*/
     justify-content: space-between;
-    
+
 }
 
 .hero {
     background-image: url(../img/principal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center; /*Centra la imagen vertical y horizontalmente*/
+    background-position: center center;
+    /*Centra la imagen vertical y horizontalmente*/
     height: 55rem;
 }
 
 
 /* Categorias */
 
-.categorias  {
-    padding-top: 5rem; /* si tengo un espacio abajo debo tener el mismo arriba*/
+.categorias {
+    padding-top: 5rem;
+    /* si tengo un espacio abajo debo tener el mismo arriba*/
 }
 
 
@@ -275,7 +292,8 @@ img {
     text-align: center;
     display: block;
     padding: 2rem;
-    font-size: 2rem; /* las propiedades del text son para afectar todo el texto font es para afecta la fuente (hacerlo mas grande)*/
+    font-size: 2rem;
+    /* las propiedades del text son para afectar todo el texto font es para afecta la fuente (hacerlo mas grande)*/
 }
 
 
@@ -296,11 +314,13 @@ img {
 /*BLOQUE NOSOTROS*/
 
 .sobre-nosotros {
-    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100% ), url(../img/nosotros.jpg) ; /* primer valor ponemos la direcion y luego jugamos con el resto*/
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    /* primer valor ponemos la direcion y luego jugamos con el resto*/
     background-position: left center;
     padding: 10rem 0;
     background-repeat: no-repeat;
-    background-size: 100%, 120rem ;
+    background-size: 100%, 120rem;
+    margin-top: 5rem;
 }
 
 .sobre-nosotros-grid {
@@ -309,7 +329,7 @@ img {
 }
 
 .texto-nosotros {
-    flex-basis: 50% ;
+    flex-basis: 50%;
     padding-left: 10rem;
     color: #fff;
 }
@@ -341,7 +361,7 @@ img {
 .listado-productos {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-   gap: 2rem;
+    gap: 2rem;
 }
 
 
@@ -367,9 +387,10 @@ img {
     grid-column-start: 1;
     grid-column-end: 4;
 }
+
 .producto:nth-child(2) img,
 .producto:nth-child(3) img {
-    height:30rem;
+    height: 30rem;
     width: 100%;
     object-fit: cover;
 }
@@ -404,9 +425,9 @@ img {
 
 
 .texto-producto {
- text-align: center;
- color: #fff;
-padding: 2rem;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
 }
 
 .texto-producto h3 {
@@ -414,13 +435,13 @@ padding: 2rem;
 }
 
 .texto-producto p {
-margin: 0 0 .5rem 0;
+    margin: 0 0 .5rem 0;
 }
 
 
 .texto-producto .precio {
-     font-size: 2.8rem;
-     font-weight: 900;
+    font-size: 2.8rem;
+    font-weight: 900;
 }
 
 
@@ -429,7 +450,7 @@ margin: 0 0 .5rem 0;
 .site-footer {
     border-top: 1px solid #e1e1e1;
     margin-top: 5rem;
-    padding-top:5rem ;
+    padding-top: 5rem;
 }
 
 .site-footer h3 {
@@ -444,13 +465,13 @@ margin: 0 0 .5rem 0;
 
 
 
-.footer-menu a{
+.footer-menu a {
     display: block;
 }
 
 .copyright {
-margin-top: 5rem;
-text-align: center;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 
@@ -466,3 +487,85 @@ text-align: center;
     flex:1 ; /* Factor de crecimiento que va a tener un div, cuantas veces mas va a crecer con respecto a otro
 } 
  */
+
+
+
+
+
+
+
+/*Nosotros */
+
+.contenedor-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    /*Si mide menos de 500 pexiles le asigna 1fr a cada uno*/
+    column-gap: 4rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/** Blog*/
+
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: 700;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+
+/*Entrada Blog*/
+
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+
+/** Galeria*/
+
+.galeria {
+    list-style: none;
+    padding: 0;
+    /*Elimina la franga que deja el puntito*/
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
