@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         date: '',
         text: '',
         pais: '',
-        cliente: '',
-        proveedor: '',
+
+
         categorias: '',
     }
 

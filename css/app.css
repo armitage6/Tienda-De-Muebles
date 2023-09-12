@@ -171,21 +171,46 @@ h1,
 h2,
 h3 {
     font-family: 'Playfair Display', serif;
-    margin: 0 0 5rem 0;
+    margin: 0 0 2rem 0;
 }
 
 h1 {
-    font-size: 5rem;
-}
-
-h2 {
-
     font-size: 4rem;
 }
 
-h3 {
-    font-size: 3rem;
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
 }
+
+
+h2 {
+
+    font-size: 3.2rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+
+
+
+h3 {
+    font-size: 2.4rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+
+
 
 a {
     text-decoration: none;
@@ -216,6 +241,7 @@ img {
     text-align: center;
     /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
     border: none;
+
 }
 
 .btn:hover {
@@ -234,9 +260,13 @@ img {
 }
 
 
-.max-widht-30 {
-    max-width: 30rem
+@media (min-width: 768px) {
+    .max-widht-30 {
+        max-width: 30rem
+    }
 }
+
+
 
 
 
@@ -262,12 +292,25 @@ img {
 }
 
 .nav-principal {
-    padding: 1rem 0;
     display: flex;
-    /*Con esto habilitamos flexbox en el elemento*/
-    justify-content: space-between;
-
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
+
+
+@media (min-width: 768px) {
+    .nav-principal {
+        padding: 1rem 0;
+        flex-direction: row;
+        /*Con esto habilitamos flexbox en el elemento*/
+        justify-content: space-between;
+    }
+}
+
+
+
+
 
 .submenu {
     position: relative;
@@ -277,24 +320,26 @@ img {
 .submenu #carrito {
     display: none;
     margin: 0;
+    position: absolute;
+
 }
 
 .submenu:hover #carrito {
-    display: block;
+    display: inline;
     position: absolute;
-    right: 0;
-    top: 100%;
-    padding: 20px;
-    min-width: 500px;
-    min-height: 400px;
     background-color: #FFF;
+    padding: 1rem;
+    min-width: 370px;
+    min-height: 350px;
+
+
 
 }
 
 .carrito-table {
-    min-width: 100%;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: bold;
+    min-width: 100%;
 }
 
 .carrito-table tr {
@@ -305,12 +350,10 @@ img {
     padding-bottom: 2rem;
 }
 
-
-
 .eliminar {
     border-radius: 50%;
-    min-width: 4rem;
-    min-height: 1rem;
+    min-width: 1rem;
+    min-height: .1rem;
     text-align: center;
     color: #FFF;
     background-color: #8cbc00;
@@ -323,6 +366,44 @@ img {
     background-color: #769c02;
 }
 
+@media (min-width: 768px) {
+    .submenu:hover #carrito {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 2rem;
+        min-width: 500px;
+        min-height: 400px;
+        background-color: #FFF;
+
+    }
+
+
+    .carrito-table {
+        min-width: 100%;
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .eliminar {
+
+        min-width: 4rem;
+        min-height: 1rem;
+
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
 /*Hero*/
 .hero {
     background-image: url(../img/principal.jpg);
@@ -330,18 +411,40 @@ img {
     background-size: cover;
     background-position: center center;
     /*Centra la imagen vertical y horizontalmente*/
-    height: 55rem;
+    height: 25rem;
 }
+
+
+@media (min-width: 768px) {
+    .hero {
+        height: 55rem;
+    }
+}
+
 
 
 /* Categorias */
 
 .categorias {
-    padding-top: 5rem;
+    padding: 5rem 0;
     /* si tengo un espacio abajo debo tener el mismo arriba*/
 }
 
+.categoria {
+    margin-bottom: 2rem;
+}
 
+
+@media (min-width: 768px) {
+    .categoria {
+        margin-bottom: 0;
+    }
+
+}
+
+.categoria img {
+    width: 100%;
+}
 
 
 .categoria a {
@@ -359,35 +462,63 @@ img {
     border-bottom-right-radius: 1rem;
 }
 
-
-
-.listado-categorias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+@media (min-width: 768px) {
+    .listado-categorias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
+
+
 
 /*BLOQUE NOSOTROS*/
 
 .sobre-nosotros {
-    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    background-image: linear-gradient(to bottom, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
     /* primer valor ponemos la direcion y luego jugamos con el resto*/
-    background-position: left center;
-    padding: 10rem 0;
+    background-position: center, top left;
+
     background-repeat: no-repeat;
-    background-size: 100%, 120rem;
-    margin-top: 5rem;
+    background-size: 100%, 70rem;
+
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+        background-size: 100%, 160rem;
+        padding: 10rem 0;
+        background-position: left center;
+    }
 }
 
 .sobre-nosotros-grid {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+
+    }
+
 }
 
 .texto-nosotros {
-    flex-basis: 50%;
-    padding-left: 10rem;
+    grid-row: 2/3;
+    padding: 5rem;
     color: #fff;
+}
+
+
+@media (min-width: 768px) {
+    .texto-nosotros {
+        grid-column: 2/3;
+
+    }
 }
 
 /* .sobre-nosotros-grid {
@@ -414,71 +545,84 @@ img {
     padding-top: 5rem;
 }
 
-.listado-productos {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
+@media (min-width: 768px) {
+    .listado-productos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+
+
+    .producto:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .producto:nth-child(1) img {
+        height: 43rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+
+
+
+
+    .producto:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .producto:nth-child(2) img,
+    .producto:nth-child(3) img {
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    .producto:nth-child(3) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+    }
+
+
+    .producto:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .producto:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .producto:nth-child(6) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+
 }
 
-
-.producto:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-}
-
-.producto:nth-child(1) img {
-    height: 43rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-
-
-
-
-.producto:nth-child(2) {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-.producto:nth-child(2) img,
-.producto:nth-child(3) img {
-    height: 30rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-.producto:nth-child(3) {
-    grid-column-start: 4;
-    grid-column-end: 7;
-}
-
-
-.producto:nth-child(4) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.producto:nth-child(5) {
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-
-.producto:nth-child(6) {
-    grid-column-start: 5;
-    grid-column-end: 7;
-}
 
 
 .producto {
     background-color: #037bc0;
-
+    margin-bottom: 2rem;
 }
 
+@media (min-width: 768px) {
+    .producto {
+        margin-bottom: 0;
+    }
+}
+
+.producto:last-of-type {
+    margin-bottom: 0;
+}
 
 .texto-producto {
     text-align: center;
@@ -511,18 +655,39 @@ img {
 
 .site-footer h3 {
     margin-bottom: .5rem;
+    text-align: center;
 }
 
-.grid-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+@media (min-width: 768px) {
+    .site-footer h3 {
+        text-align: left;
+    }
+}
+
+.grid-footer>div {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 0;
+    }
 }
 
 
 
 .footer-menu a {
     display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-menu a {
+        text-align: left;
+    }
 }
 
 .copyright {
@@ -560,34 +725,70 @@ img {
     column-gap: 4rem;
 }
 
+
+
+
 .informacion-nosotros {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5rem;
+}
+
+@media (min-width: 768px) {
+    .informacion-nosotros {
+        padding: 0;
+    }
 }
 
 
 /** Blog*/
-
-.contenedor-blog {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 4rem;
+@media (min-width: 768px) {
+    .contenedor-blog {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
 }
+
+
+
 
 .entrada {
     border-bottom: 2px solid #e1e1e1;
-    padding-bottom: 4rem;
+
     margin-bottom: 2rem;
+    padding-bottom: 4rem;
 }
+
+
+
+
+.entrada h2 {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .entrada h2 {
+        text-align: left;
+    }
+}
+
+.contenido-blog {
+    padding: 2rem;
+}
+
 
 .entrada:last-of-type {
     border: none;
 }
 
-.entrada-meta {
-    display: flex;
-    justify-content: space-between;
+
+@media (min-width: 768px) {
+    .entrada-meta {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .entrada-meta p {
@@ -602,12 +803,15 @@ img {
 /*Entrada Blog*/
 
 .contenido-entrada-blog {
-    width: 60rem;
+    max-width: 60rem;
     margin: 0 auto;
 }
 
 
 /** Galeria*/
+
+
+
 
 .galeria {
     list-style: none;
@@ -615,10 +819,21 @@ img {
     /*Elimina la franga que deja el puntito*/
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
+
+
+@media (min-width: 768px) {
+    .galeria {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+
+}
 
 .galeria img {
     height: 40rem;
@@ -691,7 +906,16 @@ select {
 
 .formulario .container-btn-form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+@media (min-width: 768px) {
+    .formulario .container-btn-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .btn-form {
@@ -706,7 +930,13 @@ select {
     text-align: center;
     /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
     border: none;
+    margin-bottom: 2rem;
+}
 
+@media (min-width: 768px) {
+    .btn-form {
+        margin-bottom: 0;
+    }
 }
 
 .opacity {
