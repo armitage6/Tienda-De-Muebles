@@ -16,6 +16,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/spinit.css">
 </head>
 
 <body>
@@ -44,39 +45,56 @@
     <main class="contenido-principal contenedor">
         <h2 class="text-center">Contacto</h2>
 
-        <form class="formulario">
+        <form class="formulario" id="formulario">
             <fieldset>
                 <legend>Tus Datos</legend>
 
                 <div class="campo">
+                    <div class="input">
+                        <label for="nombre">Nombre:</label>
+                        <input id="nombre" type="text" placeholder="Tu Nombre" />
 
-                    <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text" placeholder="Tu Nombre" />
+                    </div>
                 </div>
 
                 <div class="campo">
-                    <label for="asunto">Asunto:</label>
-                    <input id="asunto" type="text" placeholder="Tu asunto" />
+                    <div class="input">
+
+                        <label for="asunto">Asunto:</label>
+                        <input id="asunto" type="text" placeholder="Tu asunto" />
+                    </div>
                 </div>
 
                 <div class="campo">
-                    <label for="email">E-mail:</label>
-                    <input id="email" type="email" placeholder="Tu Email" />
+                    <div class="input">
+
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="email" placeholder="Tu Email" />
+                    </div>
                 </div>
 
                 <div class="campo">
-                    <label for="tel">Teléfono:</label>
-                    <input id="tel" type="tel" />
+                    <div class="input">
+
+                        <label for="tel">Teléfono:</label>
+                        <input id="tel" type="tel" placeholder="Tu teléfono" />
+                    </div>
                 </div>
 
                 <div class="campo">
-                    <label for="date">Fecha:</label>
-                    <input id="date" type="date" placeholder="Tu teléfono" />
+                    <div class="input">
+
+                        <label for="date">Fecha:</label>
+                        <input id="date" type="date" />
+                    </div>
                 </div>
 
                 <div class="campo">
-                    <label for="text">Mensaje:</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <div class="input">
+
+                        <label for="text">Mensaje:</label>
+                        <textarea name="" id="text" cols="30" rows="10"></textarea>
+                    </div>
                 </div>
 
             </fieldset>
@@ -84,16 +102,19 @@
             <fieldset>
                 <legend>País</legend>
                 <div class="campo">
-                    <label for="pais">País: </label>
-                    <select name="" id="pais">
-                        <option disabled>-- Seleccione --</option>
-                        <option value="CL">Chile</option>
-                        <option value="PR">Perú</option>
-                        <option value="CO">Colombia</option>
-                        <option value="ES">España</option>
-                        <option value="MX">México</option>
-                        <option value="AR">Argetina</option>
-                    </select>
+                    <div class="input">
+
+                        <label for="pais">País: </label>
+                        <select name="pais" id="pais">
+                            <option selected="true" disabled>-- Seleccione --</option>
+                            <option value="CL">Chile</option>
+                            <option value="PR">Perú</option>
+                            <option value="CO">Colombia</option>
+                            <option value="ES">España</option>
+                            <option value="MX">México</option>
+                            <option value="AR">Argetina</option>
+                        </select>
+                    </div>
 
                 </div>
             </fieldset>
@@ -102,33 +123,59 @@
                 <legend>Información Extra</legend>
 
                 <div class="campo">
-                    <label for="cliente">Cliente</label>
-                    <input id="cliente" type="radio" name="tipo" />
+                    <div class="input">
+
+                        <label for="cliente">Cliente</label>
+                        <input id="cliente" type="radio" name="tipo" value="cliente" />
+                    </div>
                 </div>
 
                 <div class="campo">
-                    <label for="proveedor">Proveedor</label>
-                    <input id="proveedor" type="radio" name="tipo" />
+                    <div class="input">
+
+                        <label for="proveedor">Proveedor</label>
+                        <input id="proveedor" type="radio" name="tipo" value="proveedor" />
+                    </div>
                 </div>
 
 
 
 
                 <div class="campo">
-                    <label for="categorias">Categoría de Interés</label>
-                    <input id="categorias" name="categorias" list="categorias-list" />
-                    <datalist id="categorias-list">
-                        <option value="Cocina" />
-                        <option value="Exterior" />
-                        <option value="Recamaras" />
-                        <option value="Oficina" />
-                        <option value="Televisión" />
-                    </datalist>
+                    <div class="input">
+
+                        <label for="categorias">Categoría de Interés</label>
+                        <input id="categorias" name="categorias" list="categorias-list" />
+                        <datalist id="categorias-list">
+                            <option value="Cocina" />
+                            <option value="Exterior" />
+                            <option value="Recamaras" />
+                            <option value="Oficina" />
+                            <option value="Televisión" />
+                        </datalist>
+                    </div>
                 </div>
 
             </fieldset>
+            <div class="container-btn-form">
 
-            <input class="btn" type="submit" value="Enviar Formulario" />
+
+                <input class="btn-form opacity" type="submit" value="Enviar Formulario" disabled />
+                <input class="btn-form-reset" type="reset" value="Resetiar Formulario" />
+            </div>
+            <div id="spinkit" class="hidden contenedor-spinkit">
+
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+
+
         </form>
 
 
@@ -176,6 +223,7 @@
     </footer>
 
 
+    <script src="formulario.js"></script>
 </body>
 
 </html>

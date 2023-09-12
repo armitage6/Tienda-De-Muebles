@@ -631,12 +631,13 @@ img {
 
 .formulario {
     max-width: 60rem;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .formulario fieldset {
     border: 1px solid black;
     margin-bottom: 2rem;
+
 }
 
 .formulario legend {
@@ -654,10 +655,18 @@ img {
 .campo {
     display: flex;
     margin-bottom: 2rem;
+    flex-direction: column;
+
 }
+
+.input {
+    display: flex;
+}
+
 
 .campo label {
     flex-basis: 10rem;
+
 }
 
 
@@ -667,4 +676,79 @@ select {
     flex: 1;
     border: 1px solid #e1e1e1;
     padding: 1rem;
+}
+
+.alerta-form {
+    background-color: red;
+    color: #FFF;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+}
+
+
+.formulario .container-btn-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-form {
+    background-color: #8cbc00;
+    display: block;
+    /* Display: block hace que ocupe todo el ancho disponible*/
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
+    border: none;
+
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.btn-form:hover {
+    /*hover sirve para posicionarse sobre un elemento */
+    cursor: pointer;
+    background-color: #769c02;
+}
+
+
+.btn-form-reset {
+    background-color: #000;
+    display: block;
+    /* Display: block hace que ocupe todo el ancho disponible*/
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    /*tenemos una transicion que va animar el color de fondo le decimos la cantidad y el metodo */
+    border: none;
+
+}
+
+.btn-form-reset:hover {
+    /*hover sirve para posicionarse sobre un elemento */
+    cursor: pointer;
+    background-color: #1a1a1a;
+}
+
+
+.alerta-exito {
+    background-color: #8cbc00;
+    color: #FFF;
+    padding: 1rem;
+    text-align: center;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
