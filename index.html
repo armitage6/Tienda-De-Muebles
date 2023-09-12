@@ -15,6 +15,10 @@
         href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap"
         rel="stylesheet">
 
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -33,7 +37,30 @@
             <a href="blog.html">Blog</a>
             <a href="galeria.html">Galería</a>
             <a href="contacto.html">Contacto</a>
+            <div class="submenu">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+                <div id="carrito">
 
+                    <table id="lista-carrito" class="carrito-table">
+                        <thead>
+                            <tr>
+                                <td>Imagen</td>
+                                <td>Nombre</td>
+                                <td>Precio</td>
+                                <td>Cantidad</td>
+                                <td></td>
+                            </tr>
+
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+
+                    <a href="#" id="vaciar-carrito" class="btn">Vaciar carrito</a>
+                </div>
+            </div>
         </nav>
     </div>
 
@@ -85,7 +112,7 @@
 
 
 
-        <div class="listado-productos">
+        <div class="listado-productos" id="lista-curso">
             <div class="producto">
                 <img src="img/producto1.jpg" alt="">
                 <div class="texto-producto">
@@ -93,7 +120,7 @@
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
                     <p class="precio">$1,000.00</p>
-                    <a class="btn" href="#">Agregar Carrito</a>
+                    <a class="btn btn-js" href="#" data-id="1">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -105,7 +132,7 @@
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
                     <p class="precio">$1,000.00</p>
-                    <a class="btn" href="#">Agregar Carrito</a>
+                    <a class="btn btn-js" href="#" data-id="2">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -118,7 +145,7 @@
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
                     <p class="precio">$1,000.00</p>
-                    <a class="btn" href="#">Agregar Carrito</a>
+                    <a class="btn btn-js" href="#" data-id="3">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -130,7 +157,7 @@
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
                     <p class="precio">$1,000.00</p>
-                    <a class="btn" href="#">Agregar Carrito</a>
+                    <a class="btn btn-js" href="#" data-id="4">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -142,7 +169,7 @@
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
                     <p class="precio">$1,000.00</p>
-                    <a class="btn" href="#">Agregar Carrito</a>
+                    <a class="btn btn-js" href="#" data-id="5">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -154,7 +181,7 @@
                     <p>Every day is taco ipsum tuesday. It’s raining tacos, from out of the sky, tacos, don’t even ask
                         why. How do you feel about hard shelled tacos?</p>
                     <p class="precio">$1,000.00</p>
-                    <a class="btn" href="#">Agregar Carrito</a>
+                    <a class="btn btn-js" href="#" data-id="6">Agregar Carrito</a>
                 </div>
 
             </div>
@@ -207,6 +234,9 @@
     </footer>
 
 
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -269,6 +269,61 @@ img {
 
 }
 
+.submenu {
+    position: relative;
+    margin: 0;
+}
+
+.submenu #carrito {
+    display: none;
+    margin: 0;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding: 20px;
+    min-width: 500px;
+    min-height: 400px;
+    background-color: #FFF;
+
+}
+
+.carrito-table {
+    min-width: 100%;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.carrito-table tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+
+.eliminar {
+    border-radius: 50%;
+    min-width: 4rem;
+    min-height: 1rem;
+    text-align: center;
+    color: #FFF;
+    background-color: #8cbc00;
+    padding: .7rem;
+    display: block;
+    transition: background-color .3s ease-out;
+}
+
+.eliminar:hover {
+    background-color: #769c02;
+}
+
+/*Hero*/
 .hero {
     background-image: url(../img/principal.jpg);
     background-repeat: no-repeat;
